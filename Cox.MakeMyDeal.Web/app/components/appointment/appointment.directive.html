@@ -1,0 +1,24 @@
+<div ng-click="showApptModal()" class="appt-box" ng-class="{'booked': appt.isBooked}">
+    <div class="appt-time-range">{{appt.startHour}} - {{appt.endHour}}</div>
+    <script type="text/ng-template" id="apptDirectiveModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">{{vm.appt.startHour}} - {{vm.appt.endHour}}</h3>
+        </div>
+        <div class="modal-body">
+            <form name="apptForm" novalidate>
+                <div class="form-group" ng-class="{ 'has-error' : apptForm.name.$invalid && !apptForm.name.$pristine }">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" ng-model="vm.appt.name" required>
+                    <p ng-show="apptForm.name.$invalid && !apptForm.name.$pristine" class="help-block">Name is required.</p>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : apptForm.phone.$invalid && !apptForm.phone.$pristine }">
+                    <label>Phone</label>
+                    <input type="text" name="phone" class="form-control" ng-model="vm.appt.phone" required>
+                    <p ng-show="apptForm.phone.$invalid && !apptForm.phone.$pristine" class="help-block">Phone is required.</p>
+                </div>
+                <button type="submit" class="btn btn-primary" ng-disabled="apptForm.$invalid" ng-click="vm.save()">Save</button>
+                <button class="btn btn-warning" type="button" ng-click="vm.cancel()">Cancel</button>
+            </form>
+        </div>
+    </script>
+</div>

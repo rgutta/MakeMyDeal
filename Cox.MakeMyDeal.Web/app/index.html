@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mmdApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Make My Deal Appointments</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <script src="app.js"></script>
+    <script src="components/appointment/appointment-list.directive.js"></script>
+    <script src="components/appointment/appointment-list.controller.js"></script>
+    <script src="components/appointment/appointment.directive.js"></script>
+    <script src="components/appointment/appointment.directive.modal.controller.js"></script>
+    <script src="components/appointment/appointment.service.js"></script>
+</head>
+
+<body class="container">
+    <header>
+        <h1><u>Appointments</u></h1>
+    </header>
+    <body>
+        <mmd-appointment-list></mmd-appointment-list>
+    </body>
+</body>
+</html>

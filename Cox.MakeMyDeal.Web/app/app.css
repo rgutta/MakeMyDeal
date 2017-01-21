@@ -1,0 +1,14 @@
+.appt-box {
+    border: solid 2px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.booked {
+    background-color: red;
+}
+
+.appt-time-range {
+    font-weight: bold;
+    text-align: center;
+}
